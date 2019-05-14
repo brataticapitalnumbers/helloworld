@@ -21,7 +21,7 @@ paste the following code.
 	You can accept the default or customize it like "yourname/hello" or what you want. Complete all Composer questions like: 
 	Package name (/) [juniorgrossi/hello-world]: juniorgrossi/hello-world
 	Description []: My first Composer project
-	Author [Junior Grossi <me@juniorgrossi.com>]: Your Name <your@name.com>
+	Author [Junior Grossi <me@juniorgrossi.com>]: Bratati Dutta <bratati@capitalnumbers.com>
 	Minimum Stability []: dev
 	Define your dependencies.
 	Would you like to define your dependencies (require) interactively [yes]? no
@@ -50,6 +50,7 @@ paste the following code.
     }
 }
 
+==========================START: STEPS FOR TESTING PURPOSE============================
 4) composer install
 
 
@@ -64,6 +65,8 @@ paste the following code.
 6) Go to the terminal (or create a PHP web server inside “tests” dir) and type:
 
 	php tests/test.php
+
+==========================END: STEPS FOR TESTING PURPOSE============================
 
 
 7) Create an account in github
@@ -100,9 +103,14 @@ paste the following code.
 	git init 
 	git add . 
 	git commit -m "First commit" 
-	git remote add origin git@github.com:brataticapitalnumbers/helloworld.git 
+	git remote add origin https://github.com/brataticapitalnumbers/helloworld.git 
 	git push origin master
 
 
+[to remove originin you can use the command
+	git remote rm origin
 
+]
+
+git rm -r *                # delete everything
 
