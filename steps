@@ -1,0 +1,108 @@
+https://blog.jgrossi.com/2013/creating-your-first-composer-packagist-package/
+
+
+1) hello-world/src/HelloWorld/SayHello.php
+
+paste the following code.
+
+	<?php 
+	namespace HelloWorld;
+	class SayHello
+	{
+	    public static function world()
+	    {
+		return 'Hello World, Composer!';
+	    }
+	}
+
+2) composer init
+
+	Package name (/) [juniorgrossi/hello-world]:
+	You can accept the default or customize it like "yourname/hello" or what you want. Complete all Composer questions like: 
+	Package name (/) [juniorgrossi/hello-world]: juniorgrossi/hello-world
+	Description []: My first Composer project
+	Author [Junior Grossi <me@juniorgrossi.com>]: Your Name <your@name.com>
+	Minimum Stability []: dev
+	Define your dependencies.
+	Would you like to define your dependencies (require) interactively [yes]? no
+	Would you like to define your dev dependencies (require-dev) interactively [yes]? no
+
+
+3) update composer.json
+
+{
+    "name": "juniorgrossi/hello-world",
+    "description": "My first Composer project",
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "your@name.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "HelloWorld": "src/"
+        }
+    }
+}
+
+4) composer install
+
+
+5) With Composer installed create a directory “tests” inside your root dir. 
+	Create the “test.php” file inside it with the follow content:
+
+	<?php 
+	require_once __DIR__ . '/../vendor/autoload.php'; // Autoload files using Composer autoload
+	use HelloWorld\SayHello;
+	echo SayHello::world();
+
+6) Go to the terminal (or create a PHP web server inside “tests” dir) and type:
+
+	php tests/test.php
+
+
+7) Create an account in github
+	URL: github.com
+	Username: brataticapitalnumbers
+	Password: brataticn@987
+
+	[
+
+
+	…or create a new repository on the command line
+		echo "# helloworld" >> README.md
+		git init
+		git add README.md
+		git commit -m "first commit"
+		git remote add origin https://github.com/brataticapitalnumbers/helloworld.git
+		git push -u origin master
+
+	…or push an existing repository from the command line
+		git remote add origin https://github.com/brataticapitalnumbers/helloworld.git
+		git push -u origin master
+
+	]
+
+
+8) Go to Github and create a new public repo called “helloworld”, start the Git project inside your root dir and push it:
+	
+	
+	
+
+8) Sending to Packagist.org
+
+
+	git init 
+	git add . 
+	git commit -m "First commit" 
+	git remote add origin git@github.com:brataticapitalnumbers/helloworld.git 
+	git push origin master
+
+
+
+
