@@ -112,5 +112,10 @@ paste the following code.
 
 ]
 
-git rm -r *                # delete everything
+git rm -r --cached *                # delete everything
+
+use --cached to keep the file, or -f to force removal
+
+
+
 
